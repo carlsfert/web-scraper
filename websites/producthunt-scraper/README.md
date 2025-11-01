@@ -48,8 +48,6 @@ This Product Hunt scraper uses **Python 3.10+** with **Playwright** for browser 
 1. Clone and install Python environment:
 
 ```bash
-git clone https://github.com/scrapfly/scrapfly-scrapers.git
-cd scrapfly-scrapers/producthunt-scraper
 poetry install
 ```
 
