@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "producthunt-scraper"
+version = "1.0.0"
+description = "Product Hunt scraper using Playwright - extracts product data, search results, and historical archives"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+playwright = "^1.40.0"
+beautifulsoup4 = "^4.12.0"
+lxml = "^5.0.0"
+pytest-asyncio = "^0.23.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+pytest-asyncio = "^0.23.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["test.py"]
+python_files = ["test.py"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+
+[tool.poetry.scripts]
+producthunt-scraper = "run:main"
