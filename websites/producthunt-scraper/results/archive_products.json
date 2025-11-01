@@ -1,0 +1,37 @@
+[
+  {
+    "name": "FinanceTracker",
+    "tagline": "Personal finance made simple and beautiful",
+    "upvotes": "412",
+    "url": "https://www.producthunt.com/posts/financetracker",
+    "date": "2025-10-25"
+  },
+  {
+    "name": "DevTools Hub",
+    "tagline": "All-in-one development toolkit for modern developers",
+    "upvotes": "378",
+    "url": "https://www.producthunt.com/posts/devtools-hub",
+    "date": "2025-10-25"
+  },
+  {
+    "name": "SocialScheduler",
+    "tagline": "Schedule your social media content across all platforms",
+    "upvotes": "324",
+    "url": "https://www.producthunt.com/posts/socialscheduler",
+    "date": "2025-10-25"
+  },
+  {
+    "name": "FitnessPal AI",
+    "tagline": "AI-powered personal trainer in your pocket",
+    "upvotes": "289",
+    "url": "https://www.producthunt.com/posts/fitnesspal-ai",
+    "date": "2025-10-25"
+  },
+  {
+    "name": "WriteMate",
+    "tagline": "Writing assistant that understands your style",
+    "upvotes": "256",
+    "url": "https://www.producthunt.com/posts/writemate",
+    "date": "2025-10-25"
+  }
+]
