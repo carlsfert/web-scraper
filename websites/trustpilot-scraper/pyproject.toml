@@ -1,0 +1,124 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trustpilot-scraper"
+version = "1.0.0"
+description = "Production-ready Trustpilot scraper for extracting reviews and company data"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "RoundProxies", email = "support@roundproxies.com"}
+]
+keywords = ["trustpilot", "scraper", "web-scraping", "reviews", "data-extraction"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = [
+    "httpx>=0.25.0",
+    "parsel>=1.8.0",
+    "aiofiles>=23.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.7.0",
+    "flake8>=6.1.0",
+    "mypy>=1.5.0",
+]
+browser = [
+    "playwright>=1.40.0",
+]
+database = [
+    "asyncpg>=0.29.0",
+    "sqlalchemy>=2.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/carlsfert/web-scraper/tree/main/websites/trustpilot-scraper"
+Documentation = "https://roundproxies.com/blog/trustpilot-scraper/"
+Repository = "https://github.com/carlsfert/web-scraper"
+"Bug Tracker" = "https://github.com/carlsfert/web-scraper/issues"
+
+[project.scripts]
+trustpilot-scraper = "run:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["trustpilot*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["test.py"]
+python_files = ["test.py", "test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "--verbose",
+    "--strict-markers",
+    "--tb=short",
+    "--cov=trustpilot",
+    "--cov-report=term-missing",
+    "--cov-report=html",
+]
+
+[tool.black]
+line-length = 100
+target-version = ["py38", "py39", "py310", "py311"]
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+    \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+  | results
+)/
+'''
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
+disallow_incomplete_defs = false
+check_untyped_defs = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true
+warn_no_return = true
+follow_imports = "normal"
+ignore_missing_imports = true
+
+[tool.flake8]
+max-line-length = 100
+extend-ignore = ["E203", "W503"]
+exclude = [
+    ".git",
+    "__pycache__",
+    "build",
+    "dist",
+    ".venv",
+    "results",
+]
