@@ -2,7 +2,7 @@
 
 This scraper uses **Playwright** and Python to scrape product data from Product Hunt.
 
-Full tutorial **[How to Scrape Product Hunt](https://scrapfly.io/blog/how-to-scrape-producthunt/)**
+Full tutorial **[How to Scrape Product Hunt](https://roundproxies.com/blog/scrape-product-hunt/)**
 
 The scraping code is located in the `producthunt.py` file. It's fully documented and simplified for educational purposes, and the example scraper run code can be found in `run.py` file.
 
@@ -29,7 +29,7 @@ For output examples, see the `./results` directory.
 
 ## Fair Use Disclaimer
 
-Note that this code is provided free of charge as is, and Scrapfly does not provide free web scraping support or consultation. For any bugs, see the issue tracker.
+Note that this code is provided free of charge as is, and Roundproxies does not provide free web scraping support or consultation. For any bugs, see the issue tracker.
 
 ## Setup and Use
 
