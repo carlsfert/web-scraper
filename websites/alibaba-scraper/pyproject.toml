@@ -1,0 +1,75 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "alibaba-scraper"
+version = "1.0.0"
+description = "A robust web scraper for extracting product data from Alibaba.com"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+authors = [
+    {name = "Roundproxies", email = "info@roundproxies.com"}
+]
+keywords = ["scraper", "alibaba", "web-scraping", "ecommerce", "data-extraction"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = [
+    "requests>=2.31.0",
+    "beautifulsoup4>=4.12.0",
+    "lxml>=4.9.0",
+    "pandas>=2.0.0",
+    "urllib3>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.5.0",
+]
+selenium = [
+    "selenium>=4.15.0",
+    "webdriver-manager>=4.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/carlsfert/web-scraper/tree/main/websites/alibaba-scraper"
+Repository = "https://github.com/carlsfert/web-scraper"
+Documentation = "https://github.com/carlsfert/web-scraper/tree/main/websites/alibaba-scraper/README.md"
+"Bug Tracker" = "https://github.com/carlsfert/web-scraper/issues"
+"Proxy Provider" = "https://roundproxies.com"
+
+[tool.setuptools]
+py-modules = ["alibaba", "run", "test"]
+
+[tool.black]
+line-length = 100
+target-version = ['py38', 'py39', 'py310', 'py311']
+
+[tool.pytest.ini_options]
+testpaths = ["test.py"]
+python_files = ["test.py"]
+python_functions = ["test_*"]
+addopts = "-v --cov=alibaba --cov-report=term-missing"
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
