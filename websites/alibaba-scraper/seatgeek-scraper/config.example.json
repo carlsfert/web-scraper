@@ -1,0 +1,45 @@
+{
+  "proxy_enabled": true,
+  "proxy_list": [
+    "proxy1.roundproxies.com:8080",
+    "proxy2.roundproxies.com:8080",
+    "username:password@proxy3.roundproxies.com:8080"
+  ],
+  "delay_min": 3.0,
+  "delay_max": 7.0,
+  "user_agent_rotation": true,
+  "headless": true,
+  "max_retries": 3,
+  "timeout": 30,
+  "verbose": false,
+  "output_directory": "results",
+  "output_format": "json",
+  "categories": [
+    "concerts",
+    "sports",
+    "theater",
+    "comedy",
+    "festival",
+    "nfl",
+    "nba",
+    "mlb",
+    "nhl",
+    "mls",
+    "ncaa"
+  ],
+  "rate_limit": {
+    "requests_per_minute": 10,
+    "burst": 3
+  },
+  "scraper_settings": {
+    "extract_prices": true,
+    "extract_performers": true,
+    "extract_venue_details": true,
+    "follow_event_links": false
+  },
+  "roundproxies": {
+    "service_url": "https://roundproxies.com",
+    "api_endpoint": null,
+    "api_key": null
+  }
+}

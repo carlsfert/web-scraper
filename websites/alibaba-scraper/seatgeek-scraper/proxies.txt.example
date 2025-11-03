@@ -1,0 +1,17 @@
+# Proxy List Template for SeatGeek Scraper
+# Provided by Roundproxies.com
+# 
+# Format: host:port or username:password@host:port
+# One proxy per line
+#
+# Get premium proxies from: https://roundproxies.com
+#
+# Example entries (replace with your actual proxies):
+
+# proxy1.roundproxies.com:8080
+# proxy2.roundproxies.com:8080
+# username:password@proxy3.roundproxies.com:8080
+# 192.168.1.100:3128
+# 10.0.0.50:8888
+
+# Add your Roundproxies.com proxies below:
