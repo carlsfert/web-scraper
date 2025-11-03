@@ -1,0 +1,57 @@
+[tool.poetry]
+name = "seatgeek-scraper"
+version = "1.0.0"
+description = "Web scraper for SeatGeek event data - Provided by Roundproxies.com"
+authors = ["Roundproxies.com"]
+readme = "README.md"
+homepage = "https://github.com/carlsfert/web-scraper/tree/main/websites/seatgeek-scraper"
+repository = "https://github.com/carlsfert/web-scraper"
+keywords = ["scraper", "seatgeek", "web-scraping", "tickets", "events", "proxy"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.31.0"
+beautifulsoup4 = "^4.12.0"
+lxml = "^4.9.0"
+selenium = "^4.15.0"
+playwright = "^1.40.0"
+fake-useragent = "^1.4.0"
+python-dotenv = "^1.0.0"
+pandas = "^2.1.0"
+aiohttp = "^3.9.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.4.0"
+pytest-cov = "^4.1.0"
+black = "^23.12.0"
+flake8 = "^6.1.0"
+mypy = "^1.7.0"
+
+[tool.poetry.scripts]
+seatgeek-scraper = "run:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+target-version = ['py38']
+
+[tool.pytest.ini_options]
+testpaths = ["test.py"]
+python_files = ["test*.py"]
+python_functions = ["test_*"]
+addopts = "-v --cov=. --cov-report=html --cov-report=term"
+
+# Alternative pip requirements format
+# Save this as requirements.txt for pip users:
+# requests>=2.31.0
+# beautifulsoup4>=4.12.0
+# lxml>=4.9.0
+# selenium>=4.15.0
+# playwright>=1.40.0
+# fake-useragent>=1.4.0
+# python-dotenv>=1.0.0
+# pandas>=2.1.0
+# aiohttp>=3.9.0
